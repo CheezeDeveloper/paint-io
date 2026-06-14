@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint.io - Multiplayer Paint Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start screen -->
+    <div id="startScreen">
+        <h1>Paint.io</h1>
+        <p>Move your mouse to control your paint square</p>
+        <p>Eat smaller squares and paint orbs to grow</p>
+        <p>Don't run out of paint or you'll shrink!</p>
+        <input type="text" id="nameInput" placeholder="Enter your name" maxlength="20">
+        <button id="playBtn">Play</button>
+    </div>
+
+    <!-- Game UI -->
+    <div id="gameUI" style="display: none;">
+        <div id="stats">
+            <div id="sizeDisplay">Size: 30</div>
+            <div id="scoreDisplay">Score: 0</div>
+        </div>
+        <div id="leaderboard">
+            <h3>Leaderboard</h3>
+            <ol id="leaderboardList"></ol>
+        </div>
+        <div id="deathMessage"></div>
+    </div>
+
+    <!-- Game canvas -->
+    <canvas id="gameCanvas"></canvas>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

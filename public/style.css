@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background: #1a1a2e;
+}
+
+#gameCanvas {
+    display: block;
+    background: #16213e;
+    cursor: none;
+}
+
+#startScreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(26, 26, 46, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 1000;
+    border: 3px solid #4ECDC4;
+    box-shadow: 0 0 30px rgba(78, 205, 196, 0.5);
+}
+
+#startScreen h1 {
+    color: #4ECDC4;
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(78, 205, 196, 0.8);
+}
+
+#startScreen p {
+    color: #fff;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+#nameInput {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    border: 2px solid #4ECDC4;
+    background: #0f3460;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+#nameInput:focus {
+    border-color: #45B7D1;
+    box-shadow: 0 0 10px rgba(69, 183, 209, 0.5);
+}
+
+#playBtn {
+    padding: 15px 50px;
+    font-size: 20px;
+    background: #4ECDC4;
+    color: #1a1a2e;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#playBtn:hover {
+    background: #45B7D1;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(78, 205, 196, 0.6);
+}
+
+#gameUI {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+#stats {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(26, 26, 46, 0.8);
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: 2px solid #4ECDC4;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#sizeDisplay, #scoreDisplay {
+    margin: 5px 0;
+}
+
+#leaderboard {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(26, 26, 46, 0.8);
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: 2px solid #4ECDC4;
+    color: #fff;
+    min-width: 200px;
+}
+
+#leaderboard h3 {
+    color: #4ECDC4;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#leaderboardList {
+    list-style-position: inside;
+    padding: 0;
+}
+
+#leaderboardList li {
+    padding: 5px 0;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(78, 205, 196, 0.3);
+}
+
+#leaderboardList li:last-child {
+    border-bottom: none;
+}
+
+#deathMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(230, 57, 70, 0.95);
+    color: #fff;
+    padding: 30px 50px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    display: none;
+    border: 3px solid #ff6b6b;
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.6);
+}
